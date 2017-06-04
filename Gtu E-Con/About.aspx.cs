@@ -27,17 +27,50 @@ namespace Gtu_E_Con
         {
 
             OracleCommand Query = con.CreateCommand();
-            string mail = mailbox.Text;
-            string pw = pwbox.Text;
-            namebox.Text = mail + "  " + pw;
-            
 
-            Query.CommandText = "INSERT INTO MUZ VALUES('"+mail+"',"+pw+")";
+            Query.CommandText = "select * from users";
+            OracleDataReader Reader = Query.ExecuteReader();
+            int rowcount = 0;
+
+            while (Reader.Read())
+            {
+                ++rowcount;
+            }
+
+
+            Query.CommandText = "INSERT INTO USERS VALUES("
+                + rowcount +
+                ",'" + mailbox.Text
+                + "','" + namebox.Text
+                + "','" + bdbox.Text
+                + "'," + pwbox.Text
+                + ",'" + typelist.Text
+                + "')";
             Query.ExecuteReader();
+
+            if (typelist.Text == "regular"|| typelist.Text == "onstage")
+            {
+                Query.CommandText = "INSERT INTO PARTICIPATES VALUES(" + rowcount + "," + DropDownList1.Text + ",NULL)";
+                Query.ExecuteReader();
+            }
 
         }
 
         protected void FormView1_PageIndexChanging(object sender, FormViewPageEventArgs e)
+        {
+
+        }
+
+        protected void delbutton_Click(object sender, EventArgs e)
+        {
+            OracleCommand Query = con.CreateCommand();
+
+            Query.CommandText = "DELETE FROM USERS WHERE MAIL='" + mailbox.Text + "' AND PASSWORD='" + pwbox.Text+"'";
+            Query.ExecuteReader();
+
+        }
+
+        protected void typelist_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
