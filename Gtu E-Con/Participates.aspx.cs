@@ -25,25 +25,25 @@ namespace Gtu_E_Con
             OracleCommand Query = con.CreateCommand();
             if (UID.Text == "")
             {
-                Query.CommandText = "select e.name from Events e, Participates p, Users u where p.USERID=u.ID AND p.EVENTID=e.ID AND u.MAIL='" + UMAIL.Text + "'";
+                Query.CommandText = "select * from Events e, Participates p, Users u where p.USERID=u.ID AND p.EVENTID=e.ID AND u.MAIL='" + UMAIL.Text + "'";
             }
             else
             {
-                Query.CommandText = "select e.name from Events e, Participates p, Users u where p.USERID=u.ID AND p.EVENTID=e.ID AND u.MAIL='" + UMAIL.Text + "' AND u.ID=" + UID.Text;
+                Query.CommandText = "select * from Events e, Participates p, Users u where p.USERID=u.ID AND p.EVENTID=e.ID AND u.MAIL='" + UMAIL.Text + "' AND u.ID=" + UID.Text;
             }
             OracleDataReader Reader = Query.ExecuteReader();
             string str = "";
             int i = 0;
             while (Reader.Read())
             {
-                ListBox1.Items.Add(i++.ToString());
-                /*while (i < Reader.FieldCount)
+                i = 0;
+                while (i < Reader.FieldCount)
                 {
                     str += Reader.GetValue(i) + " ";
                     ++i;
                 }
                 ListBox1.Items.Add(str);
-                str = "";*/
+                str = "";
             }
 
         }

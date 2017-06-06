@@ -10,88 +10,87 @@
 namespace Gtu_E_Con {
     
     
-    public partial class Userops {
-
+    public partial class Eventops {
 
         /// <summary>
-        /// mailbox control.
+        /// eventName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox mailbox;
+        protected global::System.Web.UI.WebControls.TextBox eventName;
 
         /// <summary>
-        /// pwbox control.
+        /// eventDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox pwbox;
+        protected global::System.Web.UI.WebControls.TextBox eventDate;
 
         /// <summary>
-        /// namebox control.
+        /// capacity control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox namebox;
+        protected global::System.Web.UI.WebControls.TextBox capacity;
 
         /// <summary>
-        /// bdbox control.
+        /// duration control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox bdbox;
+        protected global::System.Web.UI.WebControls.TextBox duration;
 
         /// <summary>
-        /// typelist control.
+        /// eventType control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList typelist;
+        protected global::System.Web.UI.WebControls.DropDownList eventType;
 
         /// <summary>
-        /// DropDownList1 control.
+        /// TextBox1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        protected global::System.Web.UI.WebControls.TextBox TextBox1;
 
         /// <summary>
-        /// SqlDataSource1 control.
+        /// TextBox2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
+        protected global::System.Web.UI.WebControls.TextBox TextBox2;
 
         /// <summary>
-        /// addbutton control.
+        /// eventDescription control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button addbutton;
+        protected global::System.Web.UI.WebControls.TextBox eventDescription;
 
         /// <summary>
-        /// delbutton control.
+        /// Button1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button delbutton;
+        protected global::System.Web.UI.WebControls.Button Button1;
     }
 }

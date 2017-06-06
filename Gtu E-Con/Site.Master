@@ -6,7 +6,7 @@
 <head runat="server">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%: Page.Title %> - My ASP.NET Application</title>
+    <title><%: Page.Title %> - GTU E-Con</title>
 
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
@@ -51,8 +51,8 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/About">User Operations</a></li>
-                        <li><a runat="server" href="~/Contact">Event Operations</a></li>
+                        <li><a runat="server" href="~/Userops">User Operations</a></li>
+                        <li><a runat="server" href="~/Eventops">Event Operations</a></li>
                         <li><a runat="server" href="~/Participates">Participation</a></li>
                     </ul>
                     <asp:LoginView runat="server" ViewStateMode="Disabled">

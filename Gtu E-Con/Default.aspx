@@ -4,8 +4,9 @@
 
     <div class="jumbotron">
         <h1>Welcome to GTU E-Con&nbsp;&nbsp;&nbsp;&nbsp;
-            <img src="http://www.gtu.edu.tr/Files/duyuru/2015/logo.PNG" style="-webkit-user-select: none; background-size: 20px 20px; background-image: linear-gradient(45deg, #eee 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%),linear-gradient(45deg, #eee 25%, white 25%, white 75%, #eee 75%, #eee 100%); height: 86px; width: 160px;" /></h1>
+            <img src="Gebze_Teknik_Üniversitesi.PNG" style="-webkit-user-select: none; background-size: 20px 20px; background-image: linear-gradient(45deg, #eee 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%),linear-gradient(45deg, #eee 25%, white 25%, white 75%, #eee 75%, #eee 100%); height: 86px; width: 160px;" /></h1>
+       
         <p class="lead">Manage the events to participate</p>
     </div>
 
-    </asp:Content>
+</asp:Content>
