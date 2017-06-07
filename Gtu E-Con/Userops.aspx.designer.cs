@@ -11,8 +11,7 @@ namespace Gtu_E_Con {
     
     
     public partial class Userops {
-
-
+        
         /// <summary>
         /// mailbox control.
         /// </summary>
@@ -21,7 +20,7 @@ namespace Gtu_E_Con {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox mailbox;
-
+        
         /// <summary>
         /// pwbox control.
         /// </summary>
@@ -30,7 +29,7 @@ namespace Gtu_E_Con {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox pwbox;
-
+        
         /// <summary>
         /// namebox control.
         /// </summary>
@@ -39,7 +38,7 @@ namespace Gtu_E_Con {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox namebox;
-
+        
         /// <summary>
         /// bdbox control.
         /// </summary>
@@ -48,7 +47,7 @@ namespace Gtu_E_Con {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox bdbox;
-
+        
         /// <summary>
         /// typelist control.
         /// </summary>
@@ -57,7 +56,7 @@ namespace Gtu_E_Con {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList typelist;
-
+        
         /// <summary>
         /// DropDownList1 control.
         /// </summary>
@@ -66,7 +65,7 @@ namespace Gtu_E_Con {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
-
+        
         /// <summary>
         /// SqlDataSource1 control.
         /// </summary>
@@ -75,7 +74,7 @@ namespace Gtu_E_Con {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
-
+        
         /// <summary>
         /// addbutton control.
         /// </summary>
@@ -84,7 +83,25 @@ namespace Gtu_E_Con {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button addbutton;
-
+        
+        /// <summary>
+        /// mailbox0 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox mailbox0;
+        
+        /// <summary>
+        /// pwbox0 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox pwbox0;
+        
         /// <summary>
         /// delbutton control.
         /// </summary>
