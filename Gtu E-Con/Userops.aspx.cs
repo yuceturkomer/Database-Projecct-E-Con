@@ -14,6 +14,9 @@ namespace Gtu_E_Con
 {
     public partial class Userops : System.Web.UI.Page
     {
+
+        const int MAIL_COLUMN = 2;
+
         OracleConnection con;
 
         protected void Page_Load(object sender, EventArgs e)
@@ -23,6 +26,8 @@ namespace Gtu_E_Con
             con = new OracleConnection();
             con.ConnectionString = conStr;
             con.Open();
+
+
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -38,6 +43,20 @@ namespace Gtu_E_Con
             while (Reader.Read())
             {
                 ++rowcount;
+                Int32 i = 0;
+                while (i < Reader.FieldCount)
+                {
+                    if (Reader.GetValue(i).ToString().Contains(mailbox.Text))
+                    {
+                        mailbox.Text = "USER";
+                        pwbox.Text = "ALREADY";
+                        namebox.Text = "REGISTERED";
+                        bdbox.Text = "";
+                        return;
+                    }
+                    ++i;
+                }
+                
             }
 
             /*Insert values to user table*/
@@ -76,16 +95,17 @@ namespace Gtu_E_Con
             Query.CommandText = "DELETE FROM USERS WHERE MAIL='" + mailbox0.Text + "' AND PASSWORD='" + pwbox0.Text + "'";
             Query.ExecuteReader();
 
+
         }
 
         protected void typelist_SelectedIndexChanged(object sender, EventArgs e)
         {
-           
+
         }
 
         protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
         {
-           
+
         }
     }
 }

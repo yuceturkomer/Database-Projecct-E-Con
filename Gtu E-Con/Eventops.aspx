@@ -31,7 +31,11 @@
         <br />
         <br />
         Description:
-        <asp:TextBox ID="eventDescription" runat="server" Height="22px" Width="250px"></asp:TextBox>
+        <asp:TextBox ID="eventDescription" runat="server" Height="30px" Width="250px"></asp:TextBox>
+        <br />
+        <br />
+&nbsp; Address:
+        <asp:TextBox ID="address" runat="server" Height="30px" Width="298px"></asp:TextBox>
         <br />
         <br />
         Organizer:&nbsp;&nbsp;

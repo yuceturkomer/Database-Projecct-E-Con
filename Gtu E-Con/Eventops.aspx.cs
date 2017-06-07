@@ -38,7 +38,7 @@ namespace Gtu_E_Con
             }
 
             /*Get the unique id by counting rows and insert the tables required values.*/
-            query.CommandText = "INSERT INTO EVENTS VALUES(" + rowCount + "," + capacity.Text + ",'" + eventDate.Text + "','" + eventName.Text + "','" + eventDescription.Text + "'," + duration.Text + ",'" + eventType.Text + "')";
+            query.CommandText = "INSERT INTO EVENTS VALUES(" + rowCount + "," + capacity.Text + ",'" + eventDate.Text + "','" + eventName.Text + "','" + eventDescription.Text + "'," + duration.Text + ",'" + eventType.Text + "','"+address.Text+"')";
             query.ExecuteReader();
             query.CommandText = "INSERT INTO ORGANISES VALUES(" + DropDownList1.Text + "," + rowCount + ")";
             query.ExecuteReader();

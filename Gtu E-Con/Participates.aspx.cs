@@ -26,6 +26,7 @@ namespace Gtu_E_Con
         {
             ListBox1.Items.Clear();
             OracleCommand Query = con.CreateCommand();
+            /*User can search with etiher of them. Mail is prior*/
             if (UMAIL.Text != "") {
                 Query.CommandText = "select e.ID, e.NAME, e.EVENTDATE from Events e, Participates p, Users u where p.USERID=u.ID AND p.EVENTID=e.ID AND u.MAIL='" + UMAIL.Text + "'";
             }
@@ -58,6 +59,7 @@ namespace Gtu_E_Con
         {
             ListBox2.Items.Clear();
             OracleCommand Query = con.CreateCommand();
+            /*User can search with etiher of them. Event name is prior*/
             if (ENAME.Text != "")
             {
                 Query.CommandText = "select u.ID, u.REALNAME, u.MAIL, u.TYPE from Events e, Participates p, Users u where p.USERID=u.ID AND p.EVENTID=e.ID AND e.NAME='" + ENAME.Text + "'";
