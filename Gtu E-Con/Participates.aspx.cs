@@ -23,13 +23,16 @@ namespace Gtu_E_Con
         {
             ListBox1.Items.Clear();
             OracleCommand Query = con.CreateCommand();
-            if (UID.Text == "")
+            if (UMAIL.Text != "") {
+                Query.CommandText = "select e.ID, e.NAME, e.EVENTDATE from Events e, Participates p, Users u where p.USERID=u.ID AND p.EVENTID=e.ID AND u.MAIL='" + UMAIL.Text + "'";
+            }
+            else if (UID.Text != "")
             {
-                Query.CommandText = "select * from Events e, Participates p, Users u where p.USERID=u.ID AND p.EVENTID=e.ID AND u.MAIL='" + UMAIL.Text + "'";
+                Query.CommandText += "select e.ID, e.NAME, e.EVENTDATE from Events e, Participates p, Users u where p.USERID=u.ID AND p.EVENTID=e.ID AND u.ID=" + UID.Text;
             }
             else
             {
-                Query.CommandText = "select * from Events e, Participates p, Users u where p.USERID=u.ID AND p.EVENTID=e.ID AND u.MAIL='" + UMAIL.Text + "' AND u.ID=" + UID.Text;
+                return;
             }
             OracleDataReader Reader = Query.ExecuteReader();
             string str = "";
@@ -43,6 +46,40 @@ namespace Gtu_E_Con
                     ++i;
                 }
                 ListBox1.Items.Add(str);
+                str = "";
+            }
+
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            ListBox2.Items.Clear();
+            OracleCommand Query = con.CreateCommand();
+            if (ENAME.Text != "")
+            {
+                Query.CommandText = "select u.ID, u.REALNAME, u.MAIL, u.TYPE from Events e, Participates p, Users u where p.USERID=u.ID AND p.EVENTID=e.ID AND e.NAME='" + ENAME.Text + "'";
+            }
+            else if (EID.Text != "")
+            {
+                Query.CommandText = "select u.ID, u.REALNAME, u.MAIL, u.TYPE from Events e, Participates p, Users u where p.USERID=u.ID AND p.EVENTID=e.ID AND e.ID='" + EID.Text + "'";
+            }
+            else
+            {
+                return;
+            }
+
+            OracleDataReader Reader = Query.ExecuteReader();
+            string str = "";
+            int i = 0;
+            while (Reader.Read())
+            {
+                i = 0;
+                while (i < Reader.FieldCount)
+                {
+                    str += Reader.GetValue(i) + " ";
+                    ++i;
+                }
+                ListBox2.Items.Add(str);
                 str = "";
             }
 

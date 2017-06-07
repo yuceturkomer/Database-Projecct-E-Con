@@ -11,7 +11,7 @@ namespace Gtu_E_Con {
     
     
     public partial class Eventops {
-
+        
         /// <summary>
         /// eventName control.
         /// </summary>
@@ -20,7 +20,7 @@ namespace Gtu_E_Con {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox eventName;
-
+        
         /// <summary>
         /// eventDate control.
         /// </summary>
@@ -29,7 +29,7 @@ namespace Gtu_E_Con {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox eventDate;
-
+        
         /// <summary>
         /// capacity control.
         /// </summary>
@@ -38,7 +38,7 @@ namespace Gtu_E_Con {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox capacity;
-
+        
         /// <summary>
         /// duration control.
         /// </summary>
@@ -47,7 +47,7 @@ namespace Gtu_E_Con {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox duration;
-
+        
         /// <summary>
         /// eventType control.
         /// </summary>
@@ -56,25 +56,7 @@ namespace Gtu_E_Con {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList eventType;
-
-        /// <summary>
-        /// TextBox1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
-
-        /// <summary>
-        /// TextBox2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
-
+        
         /// <summary>
         /// eventDescription control.
         /// </summary>
@@ -83,7 +65,25 @@ namespace Gtu_E_Con {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox eventDescription;
-
+        
+        /// <summary>
+        /// DropDownList1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        
+        /// <summary>
+        /// SqlDataSource1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
+        
         /// <summary>
         /// Button1 control.
         /// </summary>

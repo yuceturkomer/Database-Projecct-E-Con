@@ -35,6 +35,9 @@ namespace Gtu_E_Con
 
             query.CommandText = "INSERT INTO EVENTS VALUES(" + rowCount + "," + capacity.Text + ",'" + eventDate.Text + "','" + eventName.Text + "','" + eventDescription.Text + "'," + duration.Text + ",'" + eventType.Text + "')";
             query.ExecuteReader();
+            query.CommandText = "INSERT INTO ORGANISES VALUES(" + DropDownList1.Text + "," + rowCount + ")";
+            query.ExecuteReader();
+
         }
     }
 }

@@ -12,8 +12,7 @@
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
     <webopt:BundleReference runat="server" Path="~/Content/css" />
-    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-
+    <link href="~/Gebze_Teknik_Üniversitesi.PNG" rel="shortcut icon" type="image/x-icon" />
 </head>
 <body>
     <form runat="server">
@@ -38,22 +37,22 @@
             </Scripts>
         </asp:ScriptManager>
 
-        <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar navbar-inverse navbar-fixed-top" style="background-color: #FF9B37">
             <div class="container">
-                <div class="navbar-header">
+                <div class="navbar-header" style="background-color: #FF9B37">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" runat="server" href="~/">GTU E-Con</a>
+                    <a class="navbar-brand" runat="server" href="~/" style="background-color: #44009F; font-family: Calibri; font-size: x-large; color: #FFAE35;">GTU E-Con</a>
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/Userops">User Operations</a></li>
-                        <li><a runat="server" href="~/Eventops">Event Operations</a></li>
-                        <li><a runat="server" href="~/Participates">Participation</a></li>
+                        <li><a runat="server" href="~/Userops" style="font-family: Calibri; font-size: x-large; color: #44009F;">Create New User</a></li>
+                        <li><a runat="server" href="~/Eventops" style="font-family: Calibri; font-size: x-large; color: #44009F;">Add an Event</a></li>
+                        <li><a runat="server" href="~/Participates" style="font-family: Calibri; font-size: x-large; color: #44009F;">Search Users/Events</a></li>
                     </ul>
                     <asp:LoginView runat="server" ViewStateMode="Disabled">
 
@@ -73,8 +72,8 @@
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
             <hr />
-            <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - Group No 18 Project</p>
+            <footer style="text-align:center;">
+                <p>&copy; <%: DateTime.Now.Year %> - Group 18 Project</p>
             </footer>
         </div>
     </form>

@@ -20,7 +20,6 @@ namespace Gtu_E_Con
             con = new OracleConnection();
             con.ConnectionString = conStr;
             con.Open();
-
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -65,14 +64,19 @@ namespace Gtu_E_Con
         {
             OracleCommand Query = con.CreateCommand();
 
-            Query.CommandText = "DELETE FROM USERS WHERE MAIL='" + mailbox.Text + "' AND PASSWORD='" + pwbox.Text + "'";
+            Query.CommandText = "DELETE FROM USERS WHERE MAIL='" + mailbox0.Text + "' AND PASSWORD='" + pwbox0.Text + "'";
             Query.ExecuteReader();
 
         }
 
         protected void typelist_SelectedIndexChanged(object sender, EventArgs e)
         {
+           
+        }
 
+        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
         }
     }
 }
