@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+
+/*Necessary includes in order to connect*/
 using Oracle.ManagedDataAccess.Client;
 using Oracle.ManagedDataAccess.Types;
 
@@ -16,6 +18,7 @@ namespace Gtu_E_Con
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            /*Connection string. (id-> lelo pw->123 port->1521/xe)*/
             String conStr = "USER ID=lelo;Password=123;Data Source=localhost:1521/xe";
             con = new OracleConnection();
             con.ConnectionString = conStr;
@@ -31,12 +34,13 @@ namespace Gtu_E_Con
             OracleDataReader Reader = Query.ExecuteReader();
             int rowcount = 0;
 
+            /*Get the total rows to generate unique id*/
             while (Reader.Read())
             {
                 ++rowcount;
             }
 
-
+            /*Insert values to user table*/
             Query.CommandText = "INSERT INTO USERS VALUES("
                 + rowcount +
                 ",'" + mailbox.Text
@@ -68,7 +72,7 @@ namespace Gtu_E_Con
         protected void delbutton_Click(object sender, EventArgs e)
         {
             OracleCommand Query = con.CreateCommand();
-
+            /*Delete specified user*/
             Query.CommandText = "DELETE FROM USERS WHERE MAIL='" + mailbox0.Text + "' AND PASSWORD='" + pwbox0.Text + "'";
             Query.ExecuteReader();
 
