@@ -52,6 +52,11 @@ namespace Gtu_E_Con
                 Query.CommandText = "INSERT INTO PARTICIPATES VALUES(" + rowcount + "," + DropDownList1.Text + ",NULL)";
                 Query.ExecuteReader();
             }
+            if (typelist.Text == "onstage")
+            {
+                Query.CommandText = "INSERT INTO STAGES VALUES(" + rowcount + "," + DropDownList1.Text + ")";
+                Query.ExecuteReader();
+            }
 
         }
 
